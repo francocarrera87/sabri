@@ -1,0 +1,217 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    flex-direction: column; /* Asegura que los elementos se dispongan en columna */
+}
+
+.card-home {
+    position: relative; /* Establece una posición relativa para permitir la superposición */
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* Oculta cualquier desbordamiento del contenido */
+}
+
+.card-home::before {
+    content: ""; /* Contenido del pseudo-elemento */
+    position: absolute; /* Posición absoluta para cubrir todo el contenedor */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/fondo.jpeg') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Coloca este pseudo-elemento detrás del contenido */
+    filter: blur(5px) grayscale(50%); /* Aplica filtros a la imagen de fondo */
+}
+
+.card-home .presentacion-home {
+    position: relative; /* Asegura que el contenido esté encima del pseudo-elemento */
+    z-index: 1; /* Coloca el contenido sobre el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente para legibilidad */
+    border-radius: 15px; /* Borde redondeado opcional para el contenido */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra para un estilo más atractivo */
+}
+
+.presentacion-home {
+
+    padding: 20px;
+}
+
+.home-presentacion-titulo {
+    margin-left: 20px;
+    text-align: left;
+    color: black; /* Asegura que el texto sea visible sobre el fondo */
+}
+
+.home-presentacion-img img {
+    max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 20% 20% 5% 5%; /* Borde redondeado */
+    border: 2px solid #fff; /* Borde estilizado */
+    box-shadow: 0 0 10px rgb(215, 215, 215); /* Sombra para un estilo más atractivo */
+    margin-right: 20px;
+}
+
+
+
+/*------------------contenedor ugc -----------*/
+.ugc {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('../img/fondos/fondo2.jpg') no-repeat center center;
+    background-size: cover;
+    overflow: hidden; /* Oculta cualquier contenido que se salga de sus límites */
+}
+
+.contenedor-ugc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Reducido para centrar el contenido */
+    background: rgba(250, 242, 231, 0.572); /* Fondo blanco semitransparente */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    padding: 10%;
+}
+
+.main-content {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Alinea el contenido al centro */
+    text-align: center; /* Alinea el texto al centro */
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0.5px 0.5px 0.5px rgba(0,0,0,0.6);
+}
+.container-ugc-img h4{
+    font-size: 80%;
+}
+.main-content p {
+    margin-bottom: 10px;
+    color: #f9f9f9;
+}
+
+.container-ugc-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    max-width: 50%;
+    margin-left: 20px; /* Espacio izquierdo para separar del contenido anterior */
+}
+
+.container-ugc-img img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.container-ugc-img h4 {
+    text-align: center; /* Alinea el texto al centro */
+    margin: 0;
+    margin-top: 5px; /* Espacio superior para separar del contenido anterior */
+    color: #f9f9f9;
+}
+
+
+
+
+/*-------------------------- Estilos para la sección porqueUGC ----------------------------*/  
+
+
+/* Estilos para la sección porqueUGC */
+.porqueUGC {
+    position: relative; /* Posición relativa para el pseudo-elemento */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura del viewport */
+    overflow: hidden; /* Oculta cualquier contenido que se salga de sus límites */
+    background-color: rgba(162, 152, 143, 0.623); /* Fondo semitransparente */
+
+}
+
+.porqueUGC::before {
+    content: ""; /* Pseudo-elemento para el fondo */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/fondo.jpeg') no-repeat center center;
+    background-size: cover;
+    filter: blur(5px) grayscale(50%); /* Filtros para el fondo */
+    z-index: -1; /* Coloca detrás del contenido */
+}
+
+.contenedor-porqueUGC {
+    max-width: 900px; /* Ancho máximo del contenido */
+    display: flex;
+    flex-direction: row; /* Alinea en fila los elementos internos */
+    align-items: center; /* Alineación vertical */
+    background: rgba(178, 178, 178, 0.299); /* Fondo semitransparente */
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+}
+
+.contenido-imagen {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+    padding: 0 20px; /* Espacio a los lados */
+}
+
+.contenido-imagen img {
+    max-width: 160%; /* Ajusta la imagen al contenedor */
+    height: auto;
+    margin-right: 50%;
+   
+}
+
+.contenido-texto {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+    text-align: center; /* Alineación del texto a la izquierda */
+    color: #fff; /* Color del texto */
+    margin: 5%;
+
+    margin-left: 15%;
+}
+
+.contenido-texto h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contenido-texto h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contenido-texto p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
